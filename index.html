@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <title>Code Blog</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Code Blogs</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Read.html">Read</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Write
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Write a blog</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Customize your blog</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="ms-2">
+            <button
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#signinModal"
+            >
+              Sign in
+            </button>
+            <button
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+            >
+              Sign up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Nav bar ender here-->
+
+    <!--Model code for  log in-->
+    <!-- signinModal -->
+    <div
+      class="modal fade"
+      id="signinModal"
+      tabindex="-1"
+      aria-labelledby="signinModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signinModalLabel">Sign in</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <body
+              class="text-center"
+              data-new-gr-c-s-check-loaded="14.1012.0"
+              data-gr-ext-installed=""
+            >
+              <main class="form-signin">
+                <form>
+                  <img
+                    class="mb-4"
+                    src="./Images/login logo.jpg"
+                    alt=""
+                    width="72"
+                    height="57"
+                  />
+                  <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                  <div class="form-floating">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="floatingPassword"
+                      placeholder="Password"
+                    />
+                    <label for="floatingPassword">Password</label>
+                  </div>
+
+                  <div class="checkbox mb-3">
+                    <label>
+                      <input type="checkbox" value="remember-me" /> Remember me
+                    </label>
+                  </div>
+                  <button class="w-100 btn btn-lg btn-primary" type="submit">
+                    Sign in
+                  </button>
+                  <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
+                </form>
+              </main>
+            </body>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--model for sing up-->
+
+    <!-- signupModal -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">Sign up</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <!--user name-->
+              <label for="exampleDataList" class="form-label">User Name</label>
+              <input
+                class="form-control"
+                list="datalistOptions"
+                id="exampleDataList"
+                placeholder="User Name must be unique"
+              />
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Presentation slides-->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./Images/blog type.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="text-dark">Welcome to Code Blogs</h2>
+            <p class="text-primary">Read Write and learn Technology's.</p>
+            <!--buttons at slide as intro-->
+            <button type="button" class="btn btn-primary">Technology</button>
+            <button type="button" class="btn btn-secondary">Coding</button>
+            <button type="button" class="btn btn-success">Tech Facts</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./Images/slide 3.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Write and Earn</h2>
+            <h4>Best contributor can get incentive from Code Blogs.</h4>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./Images/slide2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="text-dark">Explore the best Debugger for free</h2>
+            <p>
+              We are intorducing the first and best online debugger which can
+              sort error of your code at on time.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--Top Blogs highlights row 1-->
+    <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="
+              row
+              g-0
+              border
+              rounded
+              overflow-hidden
+              flex-md-row
+              mb-4
+              shadow-sm
+              h-md-250
+              position-relative
+            "
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary"
+                >Devlopment</strong
+              >
+              <h3 class="mb-0">Which Programing language is best for what</h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="./Images/blog 1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="
+              row
+              g-0
+              border
+              rounded
+              overflow-hidden
+              flex-md-row
+              mb-4
+              shadow-sm
+              h-md-250
+              position-relative
+            "
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Blog</strong>
+              <h3 class="mb-0">A day in life of a coder</h3>
+              <div class="mb-1 text-muted">Oct 20</div>
+              <p class="mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="./Images/life of coder.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Top Blogs highlights row 2-->
+    <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="
+              row
+              g-0
+              border
+              rounded
+              overflow-hidden
+              flex-md-row
+              mb-4
+              shadow-sm
+              h-md-250
+              position-relative
+            "
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Article</strong>
+              <h3 class="mb-0">JAVA VS KOTLIN</h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="./Images/kotlin.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="
+              row
+              g-0
+              border
+              rounded
+              overflow-hidden
+              flex-md-row
+              mb-4
+              shadow-sm
+              h-md-250
+              position-relative
+            "
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success"
+                >Documantation</strong
+              >
+              <h3 class="mb-0">HTML , CSS and JS tutorial</h3>
+              <div class="mb-1 text-muted">Oct 20</div>
+              <p class="mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="./Images/JS.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <button type="button" class="btn btn-info btn-lg">
+        Our Top Contributor
+      </button>
+    </div>
+    <!--Top contributors-->
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-4">
+          <img
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            src="./Images/Python.jpg"
+            alt=""
+          />
+          <h2>PYthon</h2>
+          <p>
+            As you know i can use ML(Machine learning).By using ML i wirte my
+            own Documantation of PHP.If tesla have self diving car why not we
+            have self blog writer(Just an imagination)
+          </p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            src="./Images/Ritik.jpg"
+            alt=""
+          />
+          <h2>Ritik Dubey</h2>
+          <p>
+            Created Almost every single content of this web.The best
+            contribution is tutorial of html,css,js and now working on backend
+            Devlopment
+          </p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            src="./Images/Papa kii pari.jpg"
+            alt=""
+          />
+          <h2>Papa ki pari</h2>
+          <p>
+            Papa ki pari is a bot server that can collect data and give most
+            important tech stack which is running in market and other market
+            trend and analyis of data and Technology.
+          </p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+      </div>
+    </div>
+
+    <!--Footer data at the end-->
+    <footer class="bd-footer py-5 mt-5 bg-light">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <a
+              class="
+                d-inline-flex
+                align-items-center
+                mb-2
+                link-dark
+                text-decoration-none
+              "
+              href="/"
+              aria-label="Bootstrap"
+            >
+              <img
+                class="bd-placeholder-img rounded-circle"
+                width="60"
+                height="60"
+                src="./Images/Ritik.jpg"
+                alt=""
+              />
+              <span class="mx-3"><h3>Devlopment Information</h3></span>
+            </a>
+            <ul class="list-unstyled small text-muted">
+              <li class="mb-2">
+                Designed and built with all the love in the world by the
+                <a href="https://www.linkedin.com/in/ritik-dubey-8b6a41193/"
+                  >Ritik Dubey</a
+                >
+                with the help of
+                <a href="https://www.w3schools.com/whatis/"
+                  >W3 School documantation</a
+                >.
+              </li>
+              <li class="mb-2">
+                Code licensed
+                <a
+                  href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
+                  target="_blank"
+                  rel="license noopener"
+                  >MIT</a
+                >, docs
+                <a
+                  href="https://creativecommons.org/licenses/by/3.0/"
+                  target="_blank"
+                  rel="license noopener"
+                  >CC BY 3.0</a
+                >.
+              </li>
+              <li class="mb-2">Currently v5.0.1.</li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="/CodeBlogs.html">Home</a></li>
+              <li class="mb-2"><a href="/Read.html">Read</a></li>
+              <li class="mb-2"><a href="#inert soon">write</a></li>
+              <li class="mb-2"><a href="">Git Hub</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Devloper Profile</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="https://github.com/TheRitikdueby">Git Hub</a>
+              </li>
+              <li class="mb-2">
+                <a href="https://www.linkedin.com/in/ritik-dubey-8b6a41193/"
+                  >linkedin</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="https://www.instagram.com/the_ritik__dubey/"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mb-2"><a href="#fackebook">Facebook</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Refrences</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#">Geeks for Geeks</a></li>
+              <li class="mb-2"><a href="#">W3 School</a></li>
+              <li class="mb-2"><a href="#">Stack Overflow</a></li>
+              <li class="mb-2"><a href="#">github</a></li>
+              <li class="mb-2"><a href="#">Red hat</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Community</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#">Issues</a></li>
+              <li class="mb-2"><a href="#">Discussions</a></li>
+              <li class="mb-2"><a href="#">Corporate sponsors</a></li>
+              <li class="mb-2"><a href="#">Open Collective</a></li>
+              <li class="mb-2"><a href="#">Slack</a></li>
+              <li class="mb-2"><a href="#">Stack Overflow</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Two slide blogs on hoem page-->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
